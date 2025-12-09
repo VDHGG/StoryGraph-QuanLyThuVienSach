@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.aptech.aptechproject2.Controller.BookController.AllBooksController"
+            prefHeight="600" prefWidth="800">
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #f0f0f0;">
+            <Label text="TẤT CẢ SÁCH" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: center;" alignment="CENTER" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="searchField" promptText="Tìm theo tựa đề" prefWidth="300" />
+                <Button text="Lọc Tác Giả" onAction="#onSelectAuthorsFilter" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                <ListView fx:id="authorsFilterList" prefWidth="150" prefHeight="50" />
+                <Button text="Lọc Thể Loại" onAction="#onSelectCategoriesFilter" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                <ListView fx:id="categoriesFilterList" prefWidth="150" prefHeight="50" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="bookTable" style="-fx-background-color: white;">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                <TableColumn fx:id="titleCol" text="Tựa đề" prefWidth="200" />
+                <TableColumn fx:id="descriptionCol" text="Mô tả" prefWidth="300" />
+                <TableColumn fx:id="totalBookCol" text="Tổng Sách" prefWidth="80" />
+                <TableColumn fx:id="borrowBookCol" text="Sách Mượn" prefWidth="80" />
+                <TableColumn fx:id="availableCol" text="Sẵn Có" prefWidth="80" /> <!-- Calculated: total - borrow -->
+                <TableColumn fx:id="authorsCol" text="Tác Giả" prefWidth="150" />
+                <TableColumn fx:id="categoriesCol" text="Thể Loại" prefWidth="150" />
+                <TableColumn fx:id="averageRatingCol" text="Đánh Giá Trung Bình" prefWidth="100" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Button fx:id="prevPageBtn" text="Trang Trước" onAction="#onPrevPage" />
+            <Label fx:id="pageLabel" text="Trang 1 / 1" />
+            <Button fx:id="nextPageBtn" text="Trang Sau" onAction="#onNextPage" />
+        </HBox>
+    </bottom>
+</BorderPane>

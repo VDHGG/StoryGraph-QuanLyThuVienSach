@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.aptech.aptechproject2.Controller.LoginController"
+      style="-fx-background-color: #1e272e;">
+
+    <!-- Giữ box không co giãn -->
+    <StackPane maxWidth="360" maxHeight="420" minWidth="360" minHeight="420">
+
+        <VBox spacing="14" alignment="CENTER" prefWidth="360" prefHeight="420"
+              style="-fx-background-color: #ffffff;
+                     -fx-background-radius: 18;
+                     -fx-padding: 25;
+                     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 25, 0, 0, 8);">
+
+            <Label text="Welcome Back" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+            <Label text="Login to your account" style="-fx-text-fill: #636e72;"/>
+
+            <TextField fx:id="usernameField" promptText="User Name" prefHeight="38"
+                       style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #dfe6e9;" />
+
+            <PasswordField fx:id="passwordField" promptText="Password" prefHeight="38"
+                           style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #dfe6e9;" />
+
+            <Label fx:id="errorLabel" textFill="red" style="-fx-font-size: 12;"/>
+
+            <Button text="Login" onAction="#onLogin" prefWidth="300" prefHeight="40"
+                    style="-fx-background-color: #0984e3; -fx-text-fill: white;
+                           -fx-font-size: 15; -fx-background-radius: 8;"/>
+
+            <Button text="Don't have account? Register" onAction="#onRegisterLink"
+                    style="-fx-background-color: transparent; -fx-text-fill: #0984e3; -fx-font-size: 13;"/>
+        </VBox>
+
+    </StackPane>
+
+</VBox>
