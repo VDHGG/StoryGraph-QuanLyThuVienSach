@@ -35,7 +35,6 @@ Phù hợp với học tập, demo, thực hành quản lý dữ liệu và xây
 ## 🚀 Cài đặt & Chạy dự án
 
 ### Bước 1 — Clone source
-```bash
 git clone https://github.com/VDHGG/StoryGraph-QuanLyThuVienSach.git
 cd StoryGraph-QuanLyThuVienSach
 
